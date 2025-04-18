@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沖繩四天三夜旅遊企劃書</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header-bg {
+            background-image: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            height: 300px;
+        }
+        .hotel-card, .activity-card {
+            transition: transform 0.3s ease;
+        }
+        .hotel-card:hover, .activity-card:hover {
+            transform: translateY(-5px);
+        }
+        .section-title {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #43cea2 0%, #185a9d 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-image: linear-gradient(120deg, #43cea2 0%, #185a9d 100%);
+        }
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-image: linear-gradient(to bottom, #43cea2 0%, #185a9d 100%);
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            margin-left: -1.5px;
+        }
+        .timeline-item {
+            padding: 10px 40px 10px 70px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .timeline-badge {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 50px;
+            margin-left: -15px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 30px;
+            color: white;
+            background-image: linear-gradient(120deg, #43cea2 0%, #185a9d 100%);
+            z-index: 1;
+        }
+        .map-container {
+            height: 300px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: rgba(67, 206, 162, 0.2);
+            color: #185a9d;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        table th {
+            background-color: rgba(67, 206, 162, 0.2);
+        }
+        table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .attraction-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .attraction-item::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            background-image: linear-gradient(90deg, transparent, #43cea2, transparent);
+        }
+        .attraction-item:last-child::after {
+            display: none;
+        }
+        .map-links {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .map-links div {
+            flex: 1;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 頁面頂部 -->
+    <div class="header-bg relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl font-bold text-white mb-4">沖繩四天三夜精彩之旅</h1>
+            <p class="text-xl text-white">2025年10月17日 - 10月20日</p>
+        </div>
+    </div>
+
+    <!-- 目錄 -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-4 section-title">目錄</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">1</span>
+                            <a href="#overview" class="hover:text-blue-600">行程概要</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">2</span>
+                            <a href="#itinerary" class="hover:text-blue-600">詳細行程</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">3</span>
+                            <a href="#accommodations" class="hover:text-blue-600">住宿介紹</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">4</span>
+                            <a href="#junglia" class="hover:text-blue-600">JUNGLIA恐龍樂園攻略</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">5</span>
+                            <a href="#sup" class="hover:text-blue-600">SUP體驗</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">6</span>
+                            <a href="#food" class="hover:text-blue-600">特色美食推薦</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 行程概要 -->
+        <div id="overview" class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-6 section-title">行程概要</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border rounded-lg p-4 bg-blue-50">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-plane text-xl text-blue-600 mr-2"></i>
+                        <h3 class="text-lg font-semibold">航班資訊</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <p class="font-semibold">去程：</p>
+                            <p>中華航空 CI120</p>
+                            <p>桃園機場 08:00 出發</p>
+                            <p>那霸機場 10:30 抵達</p>
+                        </div>
+                        <div class="mt-3">
+                            <p class="font-semibold">回程：</p>
+                            <p>中華航空 CI121</p>
+                            <p>那霸機場 19:00 出發</p>
+                            <p>桃園機場 21:30 抵達</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded-lg p-4 bg-green-50">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-car text-xl text-green-600 mr-2"></i>
+                        <h3 class="text-lg font-semibold">租車資訊</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <p>租車公司：OTS Rent-a-Car</p>
+                        <p>取車地點：那霸機場</p>
+                        <p>車型：Toyota Voxy (7人座) x 6輛</p>
+                        <p>租車時間：3天2夜</p>
+                        <p>領取時間：10/17 11:00</p>
+                        <p>歸還時間：10/19 18:00</p>
+                    </div>
+                </div>
+                <div class="border rounded-lg p-4 bg-purple-50">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-star text-xl text-purple-600 mr-2"></i>
+                        <h3 class="text-lg font-semibold">行程亮點</h3>
+                    </div>
+                    <ul class="list-disc list-inside">
+                        <li>JUNGLIA恐龍樂園一日遊</li>
+                        <li>瀨良垣海灘SUP體驗</li>
+                        <li>美麗海水族館參觀</li>
+                        <li>琉球の牛頂級燒肉</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8">
+                <div class="map-container bg-white p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">景點和餐廳地圖連結</h3>
+                    <div class="map-links flex flex-col sm:flex-row items-stretch">
+                        <div class="w-full sm:w-1/2 mb-4 sm:mb-0 sm:mr-4">
+                            <h4 class="text-lg font-semibold mb-3">景點地圖</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="https://www.google.com/maps?q=古宇利島" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        <span>古宇利島</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps?q=國際通" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        <span>國際通</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps?q=美麗海水族館" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        <span>美麗海水族館</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps?q=JUNGLIA恐龍樂園" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        <span>JUNGLIA恐龍樂園</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <h4 class="text-lg font-semibold mb-3">餐廳地圖</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="https://www.google.com/maps?q=琉球の牛+國際通店" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-utensils mr-2"></i>
+                                        <span>琉球の牛 國際通店</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps?q=永旺夢樂城美食街" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-utensils mr-2"></i>
+                                        <span>永旺夢樂城美食街</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps?q=瀨良垣島餐廳" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800">
+                                        <i class="fas fa-utensils mr-2"></i>
+                                        <span>瀨良垣島餐廳</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 詳細行程 -->
+        <div id="itinerary" class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-6 section-title">詳細行程</h2>
+
+            <!-- 第一天 -->
+            <div class="mb-10">
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">1</span>
+                    第一天 (10/17 星期五): 抵達沖繩・瀨良垣入住
+                </h3>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-plane-arrival"></i>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">上午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>10:30 抵達那霸機場</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>11:00 領取租車</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>11:30 前往BEB5沖繩瀨良垣 (約90分鐘車程)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>13:00 途中在永旺夢樂城沖繩來客夢購物與用餐</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="bg-green-50 border border-green-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">下午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>14:00 抵達BEB5沖繩瀨良垣辦理入住</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>15:00 飯店設施體驗 (游泳池、休息區)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>16:00 附近瀨良垣海灘散步</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">晚上</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>18:30 在飯店附近用餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>20:00 返回飯店休息，為明天的恐龍樂園行程養精蓄銳</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二天 -->
+            <div class="mb-10">
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">2</span>
+                    第二天 (10/18 星期六): JUNGLIA恐龍樂園一日遊
+                </h3>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">上午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>08:00 飯店早餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>09:00 出發前往古宇利島 (約90分鐘車程)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>10:30 抵達古宇利島，開始遊覽</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="bg-green-50 border border-green-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">下午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>12:00 在古宇利島上用餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>13:00 繼續遊覽古宇利島</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>15:00 離開古宇利島，返回飯店 (約90分鐘車程)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">晚上</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>16:30 抵達飯店，休息</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>18:30 在飯店附近用餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>20:00 返回飯店休息，為明天的行程養精蓄銳</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三天 -->
+            <div class="mb-10">
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">3</span>
+                    第三天 (10/19 星期日): SUP體驗・美麗海水族館・移駐那霸
+                </h3>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">早上</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>07:00 早餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>08:00 瀨良垣海灘SUP體驗 (約90分鐘)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>在透明海水中欣賞海底景觀</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div class="bg-green-50 border border-green-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">中午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>11:00 離開飯店，前往美麗海水族館 (約1小時車程)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>12:30 午餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>13:30 參觀美麗海水族館 (約2小時)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="bg-yellow-50 border border-yellow-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">傍晚</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>16:00 前往那霸市區 (約2小時車程)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>18:00 抵達OTS那霸營業所還車</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>18:30 抵達那霸海洋飯店，辦理入住</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">晚上</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>19:00 前往琉球の牛享用燒肉晚餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>21:30 返回飯店或在國際通逛街</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第四天 -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-full mr-3">4</span>
+                    第四天 (10/20 星期一): 永旺購物・返程
+                </h3>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">上午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>08:00 飯店早餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>09:00 出發前往國際通 (約30分鐘車程)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>09:30 抵達國際通，開始購物</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="bg-green-50 border border-green-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">下午</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>12:00 在國際通上用餐</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>13:00 繼續購物</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>15:00 離開國際通，返回飯店 (約30分鐘車程)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
+                        <div class="bg-red-50 border border-red-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-lg">晚上</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>15:30 抵達飯店，整理行李</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>16:30 出發前往機場 (約60分鐘車程)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>17:30 抵達機場，辦理登機手續</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>19:00 登機，返回台灣</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 住宿介紹 -->
+        <div id="accommodations" class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-6 section-title">住宿介紹</h2>
+
+            <!-- BEB5沖繩瀨良垣 -->
+            <div class="mb-10 hotel-card">
+                <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-1">
+                            <div class="h-60 rounded-lg overflow-hidden">
+                                <img src="images/hotels/BEB5.jpg" alt="BEB5沖繩瀨良垣外觀圖" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                            </div>
+                            <div class="mt-4 grid grid-cols-3 gap-2">
+                                <div class="h-20 rounded overflow-hidden">
+                                    <img src="images/hotels/BEB5-Room.jpg" alt="房間" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                                <div class="h-20 rounded overflow-hidden">
+                                    <img src="images/hotels/BEB5-Pool.jpg" alt="泳池" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                                <div class="h-20 rounded overflow-hidden">
+                                    <img src="images/hotels/BEB5-Lobby.webp" alt="大廳" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-bold mb-3">BEB5沖繩瀨良垣by星野集團</h3>
+                            <div class="flex items-center mb-3">
+                                <div class="text-yellow-400 flex">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.6/5 (442則評價)</span>
+                            </div>
+                            <p class="mb-3 text-gray-700">
+                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>沖繩縣國頭郡恩納村瀨良垣1860-4
+                            </p>
+                            <p class="mb-3 text-gray-700">
+                                <i class="fas fa-phone text-blue-500 mr-2"></i>+81 50-3134-8098
+                            </p>
+                            <div class="mb-4">
+                                <h4 class="font-semibold mb-2">飯店特色</h4>
+                                <p class="text-gray-700">所有客房均配備簡易廚房、大型冰箱、洗衣烘乾機和陽台，適合長期住宿。星野集團打造的休閒公寓式飯店，提供舒適自在的住宿體驗。</p>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-swimming-pool text-blue-500 text-xl mb-1"></i>
+                                    <p class="text-xs">室外泳池</p>
+                                </div>
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-dumbbell text-blue-500 text-xl mb-1"></i>
+                                    <p class="text-xs">健身中心</p>
+                                </div>
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-utensils text-blue-500 text-xl mb-1"></i>
+                                    <p class="text-xs">餐廳</p>
+                                </div>
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-bicycle text-blue-500 text-xl mb-1"></i>
+                                    <p class="text-xs">免費自行車</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">貼心提醒</h4>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                        <span>辦理入住時間: 15:00後，退房時間: 11:00前</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                        <span>飯店提供停車服務，每晚約1000日圓</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                        <span>泳池全年開放，冬季會提供溫水</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 那霸海洋飯店 -->
+            <div class="hotel-card">
+                <div class="bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-1">
+                            <div class="h-60 rounded-lg overflow-hidden">
+                                <img src="images/hotels/naha-hotel.jpg" alt="那霸海洋飯店外觀圖" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                            </div>
+                            <div class="mt-4 grid grid-cols-3 gap-2">
+                                <div class="h-20 rounded overflow-hidden">
+                                    <img src="images/hotels/naha-room.jpg" alt="房間" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                                <div class="h-20 rounded overflow-hidden">
+                                    <img src="images/hotels/Ocean-2.jpg" alt="大廳" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                                <div class="h-20 rounded overflow-hidden">
+                                    <img src="images/hotels/Ocean3.jpg" alt="餐廳" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-bold mb-3">那霸海洋飯店 (Hotel Ocean)</h3>
+                            <div class="flex items-center mb-3">
+                                <div class="text-yellow-400 flex">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.5/5 (2568則評價)</span>
+                            </div>
+                            <p class="mb-3 text-gray-700">
+                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>沖繩縣那霸市安里2-4-8
+                            </p>
+                            <p class="mb-3 text-gray-700">
+                                <i class="fas fa-phone text-blue-500 mr-2"></i>+81 98-863-2288
+                            </p>
+                            <div class="mb-4">
+                                <h4 class="font-semibold mb-2">飯店特色</h4>
+                                <p class="text-gray-700">位於國際通上，交通便利，距離牧志單軌電車站僅2分鐘步行路程。提供舒適客房、沖繩特色早餐和親子友善設施，是探索那霸市區的絕佳住宿選擇。</p>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-map text-purple-500 text-xl mb-1"></i>
+                                    <p class="text-xs">便利位置</p>
+                                </div>
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-coffee text-purple-500 text-xl mb-1"></i>
+                                    <p class="text-xs">免費咖啡區</p>
+                                </div>
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-utensils text-purple-500 text-xl mb-1"></i>
+                                    <p class="text-xs">早餐服務</p>
+                                </div>
+                                <div class="bg-white p-2 rounded shadow-sm text-center">
+                                    <i class="fas fa-bicycle text-purple-500 text-xl mb-1"></i>
+                                    <p class="text-xs">免費自行車</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">貼心提醒</h4>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-info-circle text-purple-500 mt-1 mr-2"></i>
+                                        <span>辦理入住時間: 14:00後，退房時間: 11:00前</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-info-circle text-purple-500 mt-1 mr-2"></i>
+                                        <span>免費提供24小時沖繩香片茶與泡盛酒</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-info-circle text-purple-500 mt-1 mr-2"></i>
+                                        <span>國際通上，購物與用餐非常便利</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JUNGLIA恐龍樂園攻略 -->
+        <div id="junglia" class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-6 section-title">JUNGLIA恐龍樂園攻略</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="md:col-span-1">
+                    <div class="h-60 rounded-lg overflow-hidden">
+                        <img src="images/activities/dinosaur-park1.jpg" alt="JUNGLIA恐龍樂園概覽圖" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                    <div class="mt-4 grid grid-cols-3 gap-2">
+                        <div class="h-20 rounded overflow-hidden">
+                            <img src="images/activities/dinosaur-park2.jpg" alt="恐龍區" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                        </div>
+                        <div class="h-20 rounded overflow-hidden">
+                            <img src="images/activities/dinosaur-park3.jpg" alt="餐飲區" class="w-full h-full object-cover">
+                        </div>
+                        <div class="h-20 rounded overflow-hidden">
+                            <img src="images/activities/dinosaur-park4.jpg" alt="餐飲區" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-bold mb-3">樂園基本信息</h3>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-2"></i>
+                            <span>地址：沖縄県国頭郡今帰仁村字呉我山553番地1</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-calendar-alt text-blue-500 mt-1 mr-2"></i>
+                            <span>開幕日期：2025年7月25日</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-green-500 mt-1 mr-2"></i>
+                            <span>營業時間：9:00 - 18:00 (夏季可能延長)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-ticket-alt text-purple-500 mt-1 mr-2"></i>
+                            <span>門票：成人 8,800日圓、兒童 5,940日圓 (含稅)</span>
+                        </li>
+                    </ul>
+                    <div>
+                        <h3 class="text-lg font-bold mb-3">樂園特色</h3>
+                        <p class="text-gray-700 mb-4">
+                            JUNGLIA樂園佔地60公頃，是沖繩全新的恐龍主題樂園，結合自然與娛樂體驗。樂園前身是高爾夫球場，位於名護市與今歸仁村交界處，緊鄰美麗的古宇利島，被列入世界自然遺產範疇。以"真實"的恐龍與叢林體驗為特色，讓遊客沉浸在侏羅紀世界中。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold mb-4">必玩設施攻略</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- 恐龍追逐乘車冒險 -->
+                <div class="attraction-item bg-yellow-50 border border-yellow-100 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3 mb-3 sm:mb-0 sm:mr-4">
+                            <div class="h-40 rounded overflow-hidden">
+                                <img src="images/activities/dinosaur-park2.jpg" alt="恐龍追逐冒險" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="sm:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">恐龍追逐乘車冒險</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="tag">刺激指數: ★★★★★</span>
+                                <span class="tag">適合年齡: 6歲以上</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">搭乘特製裝甲車，在蜿蜒的叢林小徑中被栩栩如生的肉食恐龍近距離追逐。穿越茂密森林，體驗驚險刺激的恐龍世界。</p>
+                            <div>
+                                <h5 class="font-semibold text-sm">攻略提示:</h5>
+                                <ul class="text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>建議上午較早時段體驗，人潮較少</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>身高限制：120公分以上</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 高空滑索 -->
+                <div class="attraction-item bg-blue-50 border border-blue-100 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3 mb-3 sm:mb-0 sm:mr-4">
+                            <div class="h-40 rounded overflow-hidden">
+                                <img src="images/activities/dinosaur-park4.jpg" alt="高空滑索" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="sm:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">高空滑索體驗 (SKY PHOENIX)</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="tag">刺激指數: ★★★★☆</span>
+                                <span class="tag">適合年齡: 10歲以上</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">特別設計的高空滑索路線，讓您以飛鳥視角穿梭在鬱鬱蔥蔥的叢林之間。足夠安全的設計，即使懼高症也能嘗試。</p>
+                            <div>
+                                <h5 class="font-semibold text-sm">攻略提示:</h5>
+                                <ul class="text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>穿著舒適運動鞋，避免穿裙裝</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>體重限制：40-110公斤</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 熱氣球乘坐 -->
+                <div class="attraction-item bg-green-50 border border-green-100 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3 mb-3 sm:mb-0 sm:mr-4">
+                            <div class="h-40 rounded overflow-hidden">
+                                <img src="images/activities/junglia-balloon.webp" alt="熱氣球乘坐" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="sm:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">熱氣球乘坐 (HORIZON BALLOON)</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="tag">刺激指數: ★★☆☆☆</span>
+                                <span class="tag">適合年齡: 所有年齡</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">搭乘熱氣球緩緩上升，360度無死角欣賞沖繩的湛藍海岸線與蔥綠山景。是園區絕佳的全景觀賞體驗。</p>
+                            <div>
+                                <h5 class="font-semibold text-sm">攻略提示:</h5>
+                                <ul class="text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>下午時分視野最佳，可同時見山海</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>風大時可能暫停運行，請提前確認</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 尋找小恐龍 -->
+                <div class="attraction-item bg-purple-50 border border-purple-100 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3 mb-3 sm:mb-0 sm:mr-4">
+                            <div class="h-40 rounded overflow-hidden">
+                                <img src="images/activities/finding-dinosaurs-1024x576.webp" alt="尋找小恐龍" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="sm:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">尋找走失的小恐龍</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="tag">刺激指數: ★★★☆☆</span>
+                                <span class="tag">適合年齡: 4歲以上</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">化身為恐龍救援專家，駕駛推車穿越神秘叢林、駛過搖晃跳橋、進入山洞，尋找走失的小恐龍。適合親子同樂。</p>
+                            <div>
+                                <h5 class="font-semibold text-sm">攻略提示:</h5>
+                                <ul class="text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>全程有專業工作人員指導</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>沿途設有互動驚喜，注意收集點</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 巨大鞦韆 -->
+                <div class="attraction-item bg-red-50 border border-red-100 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3 mb-3 sm:mb-0 sm:mr-4">
+                            <div class="h-40 rounded overflow-hidden">
+                                <img src="images/activities/巨大鞦韆.jpg" alt="巨大鞦韆" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="sm:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">巨大鞦韆 (TITANS SWING)</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="tag">刺激指數: ★★★★☆</span>
+                                <span class="tag">適合年齡: 8歲以上</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">巨大四人座鞦韆可不是普通的遊樂設施！隨著鞦韆緩緩拉高，下一秒就被拋向高空，體驗失重感的極致刺激。</p>
+                            <div>
+                                <h5 class="font-semibold text-sm">攻略提示:</h5>
+                                <ul class="text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>身高限制：130公分以上</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>不建議有心臟問題者乘坐</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 自由落體 -->
+                <div class="attraction-item bg-orange-50 border border-orange-100 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3 mb-3 sm:mb-0 sm:mr-4">
+                        </div>
+                        <div class="sm:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">自由落體 (BUNGEE GLIDER)</h4>
+                            <div class="flex items-center mb-2">
+                                <span class="tag">刺激指數: ★★★★★</span>
+                                <span class="tag">適合年齡: 12歲以上</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">高達20公尺的自由落體設施，讓您體驗從高空急速下墜的刺激感。設計巧妙運用叢林地形，下墜過程彷彿穿梭在茂密樹林間。</p>
+                            <div>
+                                <h5 class="font-semibold text-sm">攻略提示:</h5>
+                                <ul class="text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>體重限制：50-100公斤</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-1"></i>
+                                        <span>高懼症者建議謹慎考慮</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">樂園推薦路線</h3>
+                <div class="bg-indigo-50 border border-indigo-100 rounded-lg p-6">
+                    <h4 class="font-bold text-lg mb-3">一日暢玩路線</h4>
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h5 class="font-semibold">09:30 - 11:00</h5>
+                                <p class="text-gray-700">園區入口 → 恐龍追逐乘車冒險（人氣設施，早上排隊較短）</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h5 class="font-semibold">11:00 - 12:00</h5>
+                                <p class="text-gray-700">尋找走失的小恐龍（適合中午前體驗的互動性設施）</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h5 class="font-semibold">12:00 - 13:00</h5>
+                                <p class="text-gray-700">侏羅紀餐廳午餐（建議避開12:30-13:00的用餐高峰）</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h5 class="font-semibold">13:00 - 14:30</h5>
+                                <p class="text-gray-700">巨大鞦韆 → 自由落體（午餐後的刺激組合）</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h5 class="font-semibold">14:30 - 16:00</h5>
+                                <p class="text-gray-700">高空滑索體驗 → 療癒水療區休息（視體力安排）</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-stop"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h5 class="font-semibold">16:00 - 17:00</h5>
+                                <p class="text-gray-700">熱氣球乘坐（傍晚時分視野最佳） → 紀念品購買</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">樂園實用信息</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <i class="fas fa-ticket-alt text-blue-500 mr-2"></i>
+                            門票與優惠
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>建議提前在官網或合作旅行社預購門票</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>設有快速通關選項，繁忙季節建議購買</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>3歲以下兒童免費入園</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <i class="fas fa-map-marked-alt text-green-500 mr-2"></i>
+                            交通方式
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-green-500 mt-1 mr-2"></i>
+                                <span>自駕：從那霸機場約1.5-2小時車程</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-green-500 mt-1 mr-2"></i>
+                                <span>園區設有付費停車場</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-green-500 mt-1 mr-2"></i>
+                                <span>合作飯店提供接駁巴士服務</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <i class="fas fa-utensils text-yellow-500 mr-2"></i>
+                            餐飲設施
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span>園區內有15家特色餐廳</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span>侏羅紀主題餐廳提供特色料理</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-yellow-500 mt-1 mr-2"></i>
+                                <span>可自帶簡單零食與飲料</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <i class="fas fa-umbrella-beach text-red-500 mr-2"></i>
+                            貼心提醒
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-red-500 mt-1 mr-2"></i>
+                                <span>夏季氣溫高，建議著輕便服裝並做好防曬</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-red-500 mt-1 mr-2"></i>
+                                <span>部分設施有身高/體重限制，請提前確認</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-red-500 mt-1 mr-2"></i>
+                                <span>園區內設有多處休息區與醫護站</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUP體驗 -->
+        <div id="sup" class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-6 section-title">SUP體驗</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="md:col-span-1">
+                    <div class="h-60 rounded-lg overflow-hidden">
+                        <img src="images/activities/sup1.jpg" alt="瀨良垣海灘SUP體驗圖" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-2">
+                        <div class="h-28 rounded overflow-hidden">
+                            <img src="images/activities/sup2.jpg" alt="SUP教學" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                        </div>
+                        <div class="h-28 rounded overflow-hidden">
+                            <img src="images/activities/sup3.jpg" alt="海底珊瑚" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-3">瀨良垣海灘SUP立槳體驗</h3>
+                    <div class="mb-4">
+                        <span class="tag">體驗時間: 約90分鐘</span>
+                        <span class="tag">適合程度: 初學者友善</span>
+                        <span class="tag">推薦時段: 早晨</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        在沖繩透明度極高的瀨良垣海灘體驗立槳衝浪(SUP)，是您沖繩之旅不可錯過的活動。清澈透明的海水讓您在划行時就能欣賞海底絢麗的珊瑚礁和繽紛的熱帶魚，宛如漫步在海面上的玻璃獨木舟。早晨海面平靜，是初學者體驗的最佳時間。
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-bold mb-2">體驗亮點</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-water text-blue-500 mt-1 mr-2"></i>
+                                <span>瀨良垣海灘被譽為沖繩最美的海灘之一，水質清澈，能見度極高</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-fish text-blue-500 mt-1 mr-2"></i>
+                                <span>透過透明划板，可直接欣賞海底珊瑚和熱帶魚</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-camera text-blue-500 mt-1 mr-2"></i>
+                                <span>教練提供免費拍照服務，留下難忘的美麗回憶</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user-friends text-blue-500 mt-1 mr-2"></i>
+                                <span>小班教學，確保每位參與者能得到充分的指導</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">推薦體驗地點</h4>
+                        <p class="text-gray-700">
+                            瀨良垣海灘Salty Beach Club，距離BEB5沖繩瀨良垣飯店僅5分鐘步行路程，提供專業教練指導和全套裝備。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4">SUP體驗流程</h3>
+                <div class="bg-indigo-50 border border-indigo-100 rounded-lg p-6">
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h4 class="font-semibold">報到與準備 (15分鐘)</h4>
+                                <p class="text-gray-700">換裝、簽署免責聲明、領取裝備（救生衣、槳板等）</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h4 class="font-semibold">岸上教學 (15分鐘)</h4>
+                                <p class="text-gray-700">教練示範基本姿勢、划槳技巧及安全事項</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h4 class="font-semibold">水上體驗 (45分鐘)</h4>
+                                <p class="text-gray-700">在教練帶領下划向珊瑚礁區，欣賞海底景觀</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="bg-white border rounded-lg p-3">
+                                <h4 class="font-semibold">自由活動與拍照 (15分鐘)</h4>
+                                <p class="text-gray-700">在安全區域自由划行，教練提供拍照服務</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i class="fas fa-exclamation-circle text-yellow-500 mr-2"></i>
+                        注意事項
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>請穿著泳衣或速乾衣物，準備換洗衣物</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>建議做好防曬措施（防曬衣、防曬乳）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>請勿佩戴貴重飾品，以免遺失</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>建議使用防水相機或手機防水袋</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i class="fas fa-star text-purple-500 mr-2"></i>
+                        體驗小貼士
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-2"></i>
+                            <span>早晨8-10點是體驗最佳時間，海面較平靜</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-2"></i>
+                            <span>初學者可選擇跪姿開始，掌握平衡後再站立</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-2"></i>
+                            <span>保持身體重心在板中央，會更容易平衡</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-2"></i>
+                            <span>帶小朋友參加時，可與成人共用一塊大板</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 特色美食推薦 -->
+        <div id="food" class="bg-white rounded-lg shadow-lg p-6 mb-10">
+            <h2 class="text-2xl font-bold mb-6 section-title">特色美食推薦</h2>
+
+            <!-- 琉球の牛燒肉 -->
+            <div class="mb-10">
+                <div class="bg-red-50 rounded-lg p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-1">
+                            <div class="h-60 rounded-lg overflow-hidden">
+                                <img src="images/food/wagyu.jpg" alt="琉球の牛燒肉照片" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                            </div>
+                            <div class="mt-4 grid grid-cols-2 gap-2">
+                                <div class="h-28 rounded overflow-hidden">
+                                    <img src="images/food/和牛.jpg" alt="和牛" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                                <div class="h-28 rounded overflow-hidden">
+                                    <img src="images/food/燒肉套餐.jpg" alt="燒肉套餐" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-bold mb-3">琉球の牛 頂級和牛燒肉</h3>
+                            <p class="text-gray-700 mb-3">
+                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>沖繩縣那霸市牧志3-2-3 3F
+                            </p>
+                            <p class="text-gray-700 mb-3">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>營業時間: 17:00-22:30 (最後點餐21:40)
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <div class="text-yellow-400 flex">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600">4.8/5</span>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                沖繩頂級和牛燒肉店，提供最高品質的縣產和牛，油花分布均勻，入口即化。那霸國際通店位置便利，是品嚐正宗沖繩和牛的最佳選擇。獨特的烤肉體驗和精緻的料理手法，讓每一口都充滿驚喜。
+                            </p>
+                            <div class="mb-4">
+                                <h4 class="font-bold mb-2">推薦菜品</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h5 class="font-semibold">12種烤肉套餐</h5>
+                                        <p class="text-gray-600 text-sm">約5,980日圓/人</p>
+                                        <p class="text-gray-700 text-sm">包含和牛多種部位及特色前菜</p>
+                                    </div>
+                                    <div class="bg-white p-3 rounded shadow-sm">
+                                        <h5 class="font-semibold">14種烤肉套餐</h5>
+                                        <p class="text-gray-600 text-sm">約6,980日圓/人</p>
+                                        <p class="text-gray-700 text-sm">更多高級部位和驚喜小菜</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">訂位提醒</h4>
+                                <p class="text-red-600 font-semibold">
+                                    <i class="fas fa-exclamation-triangle mr-1"></i>
+                                    必須提前1-2個月預約，可通過電話或線上系統訂位
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 其他特色美食推薦 -->
+            <h3 class="text-xl font-bold mb-4">其他必嚐美食</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 沖繩麵 -->
+                <div class="activity-card bg-yellow-50 rounded-lg p-4">
+                    <div class="h-40 rounded-lg overflow-hidden mb-3">
+                        <img src="images/food/沖繩麵.jpg" alt="沖繩麵照片" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold mb-2">沖繩麵</h4>
+                    <p class="text-gray-700 text-sm mb-3">
+                        與日本其他地區的烏冬不同，沖繩麵條更為厚實Q彈，搭配以豬骨熬製的湯頭，風味獨特。常見配料有三枚肉（軟嫩燉煮的豬肉）、魚餅、紅薑等。
+                    </p>
+                    <div>
+                        <h5 class="font-semibold text-sm mb-1">推薦店家:</h5>
+                        <p class="text-gray-700 text-sm">山原そば (やんばるそば) - 那霸市牧志</p>
+                    </div>
+                </div>
+
+                <!-- 塔可飯 -->
+                <div class="activity-card bg-green-50 rounded-lg p-4">
+                    <div class="h-40 rounded-lg overflow-hidden mb-3">
+                        <img src="images/food/塔可飯.jpg" alt="塔可飯照片" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold mb-2">塔科飯 (タコライス)</h4>
+                    <p class="text-gray-700 text-sm mb-3">
+                        源自美軍駐沖繩時期的融合料理，結合墨西哥與日本風味。在白飯上鋪滿墨西哥風味肉醬、生菜、番茄、芝士等配料，色彩豐富，口味鮮明。
+                    </p>
+                    <div>
+                        <h5 class="font-semibold text-sm mb-1">推薦店家:</h5>
+                        <p class="text-gray-700 text-sm">King Tacos 國際通店 - 那霸國際通</p>
+                    </div>
+                </div>
+
+                <!-- 海葡萄 -->
+                <div class="activity-card bg-blue-50 rounded-lg p-4">
+                    <div class="h-40 rounded-lg overflow-hidden mb-3">
+                        <img src="images/food/海葡萄.jpg" alt="海葡萄照片" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold mb-2">海葡萄</h4>
+                    <p class="text-gray-700 text-sm mb-3">
+                        沖繩特有的海藻，外形如同小葡萄串，咬下時會爆出鮮甜的海水味，被譽為「綠色魚子醬」。常見做法是沾醬油直接食用，或作為沙拉和生魚片的配菜。
+                    </p>
+                    <div>
+                        <h5 class="font-semibold text-sm mb-1">推薦店家:</h5>
+                        <p class="text-gray-700 text-sm">浜of 美ら海 - 恩納村</p>
+                    </div>
+                </div>
+
+                <!-- 石垣牛 -->
+                <div class="activity-card bg-red-50 rounded-lg p-4">
+                    <div class="h-40 rounded-lg overflow-hidden mb-3">
+                        <img src="images/food/石垣牛.jpg" alt="石垣牛照片" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold mb-2">石垣牛</h4>
+                    <p class="text-gray-700 text-sm mb-3">
+                        來自沖繩石垣島的頂級和牛，被譽為日本最優質的和牛之一。肉質柔嫩多汁，油花分布均勻，入口即溶。體驗石垣牛的最佳方式是品嚐牛排或燒肉。
+                    </p>
+                    <div>
+                        <h5 class="font-semibold text-sm mb-1">推薦店家:</h5>
+                        <p class="text-gray-700 text-sm">八重山石垣牛 那霸國際通店</p>
+                    </div>
+                </div>
+
+                <!-- 泡盛 -->
+                <div class="activity-card bg-purple-50 rounded-lg p-4">
+                    <div class="h-40 rounded-lg overflow-hidden mb-3">
+                        <img src="images/food/泡盛.jpg" alt="泡盛照片" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold mb-2">泡盛</h4>
+                    <p class="text-gray-700 text-sm mb-3">
+                        沖繩特有的蒸餾酒，使用原料為泰國米，有著獨特的香氣和口感。老年泡盛（古酒）更具收藏價值，風味更加醇厚。可直接品嚐或加冰飲用。
+                    </p>
+                    <div>
+                        <h5 class="font-semibold text-sm mb-1">推薦品牌:</h5>
+                        <p class="text-gray-700 text-sm">瑞穗、忠孝、松藤等</p>
+                    </div>
+                </div>
+
+                <!-- 紅芋塔 -->
+                <div class="activity-card bg-pink-50 rounded-lg p-4">
+                    <div class="h-40 rounded-lg overflow-hidden mb-3">
+                        <img src="images/food/紅芋塔.jpg" alt="紅芋塔照片" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold mb-2">紅芋塔</h4>
+                    <p class="text-gray-700 text-sm mb-3">
+                        沖繩知名伴手禮，以當地特產紫薯為主要材料，口感香甜細膩。外層酥皮包裹著紫色的薯泥內餡，色香味俱全，是最受歡迎的沖繩甜點之一。
+                    </p>
+                    <div>
+                        <h5 class="font-semibold text-sm mb-1">推薦店家:</h5>
+                        <p class="text-gray-700 text-sm">御菓子御殿 國際通店</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 實用旅遊資訊 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-6 section-title">實用旅遊資訊</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-3 flex items-center">
+                        <i class="fas fa-car text-blue-500 mr-2"></i>
+                        交通建議
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>租車</strong>: 強烈建議租車，特別是因為行程包含北部的恐龍樂園和瀨良垣飯店，公共交通不便。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>導航</strong>: 建議使用Google地圖或租車公司提供的GPS導航。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>停車</strong>: BEB5瀨良垣和那霸海洋飯店都有提供停車服務。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>沖繩駕駛提醒</strong>: 日本靠左行駛，請提前熟悉交通規則。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-3 flex items-center">
+                        <i class="fas fa-calendar-alt text-green-500 mr-2"></i>
+                        季節與天氣
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>10月天氣</strong>: 沖繩10月平均氣溫約23-28°C，天氣舒適。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>降水機率</strong>: 仍有午後雷陣雨可能，請準備雨具或雨衣。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>水溫</strong>: 海水溫度約25-27°C，適合進行水上活動。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>防曬提醒</strong>: 沖繩陽光強烈，戶外活動請做好防曬措施。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-3 flex items-center">
+                        <i class="fas fa-shopping-bag text-purple-500 mr-2"></i>
+                        購物推薦
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>永旺夢樂城沖繩來客夢</strong>: 沖繩最大型購物中心，提供多樣化購物體驗。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>國際通</strong>: 那霸最熱鬧的商業街，有多家特產店、紀念品店。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>推薦伴手禮</strong>: 紅芋塔、沖繩黑糖、泡盛酒、海葡萄等。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>退稅信息</strong>: 消費滿5,000日圓可在指定免稅店辦理退稅。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-red-50 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-3 flex items-center">
+                        <i class="fas fa-phone-alt text-red-500 mr-2"></i>
+                        緊急聯絡
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>緊急電話</strong>: 110 (警察) / 119 (救護、消防)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>旅遊諮詢中心</strong>: 沖繩觀光資訊中心 +81-98-859-6123</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>醫療服務</strong>: 沖繩縣立中部醫院 +81-98-973-4111</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span><strong>建議</strong>: 出發前請購買旅遊保險，備妥常用藥品。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center pt-4 border-t border-gray-200">
+                <h3 class="text-xl font-bold mb-3">祝您旅途愉快！</h3>
+                <p class="text-gray-700">期待您在沖繩度過一個充滿驚喜與美好回憶的四天三夜之旅！</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁腳 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-3">沖繩四天三夜精彩之旅</h3>
+            <p class="mb-3">2025年10月17日 - 10月20日</p>
+            <p class="text-gray-400">企劃製作日期: 2025年4月8日</p>
+        </div>
+    </footer>
+</body>
+</html>
