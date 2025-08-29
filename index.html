@@ -246,7 +246,7 @@
         tr:nth-child(even) {
             background-color: #f8f9fa;
         }
-         {
+        @media print {
             .container {
                 max-width: 100%;
                 padding: 0;
@@ -267,6 +267,8 @@
     </div>
 
     <div class="container">
+     
+
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div class="lg:col-span-1">
                 <div class="card toc">
@@ -277,12 +279,12 @@
                         <nav class="toc-nav">
                             <a href="#overview" class="active">行程概要</a>
                             <a href="#day1">Day 1: 抵達沖繩 / 購物</a>
-                            <a href="#day2">Day 2: JUNGLIA恐龍公園</a>
-                            <a href="#day3">Day 3: 美麗海水族館 / SUP</a>
+                            <a href="#day2">Day 2: 全日自由活動</a>
+                            <a href="#day2-spots">Day 2 推薦景點</a>
+                            <a href="#day2-nearby">Day 2 周邊景點</a>
+                            <a href="#day3">Day 3: Round 1 娛樂體驗</a>
                             <a href="#day4">Day 4: 國際通 / 賦歸</a>
                             <a href="#hotel">住宿介紹</a>
-                            <a href="#junglia">JUNGLIA攻略</a>
-                            <a href="#sup">SUP體驗</a>
                             <a href="#food">特色美食</a>
                             <a href="#tips">實用資訊</a>
                         </nav>
@@ -339,18 +341,10 @@
 
                             <div class="bg-blue-50 p-4 rounded-lg">
                                 <div class="flex items-center mb-2">
-                                    <i class="fas fa-water text-blue-600 mr-2"></i>
-                                    <h4 class="font-medium">瀨良垣海灘透明立槳SUP</h4>
+                                    <i class="fas fa-gamepad text-blue-600 mr-2"></i>
+                                    <h4 class="font-medium">Round 1綜合娛樂體驗</h4>
                                 </div>
-                                <p class="text-sm">在蔚藍海水上悠遊，欣賞海底珊瑚與熱帶魚</p>
-                            </div>
-
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-fish text-blue-600 mr-2"></i>
-                                    <h4 class="font-medium">沖繩美麗海水族館鯨鯊震撼</h4>
-                                </div>
-                                <p class="text-sm">親眼目睹世界最大魚類悠游，巨型水族箱令人讚嘆</p>
+                                <p class="text-sm">日本人氣娛樂中心，保齡球、電玩、卡拉OK等多元設施</p>
                             </div>
 
                             <div class="bg-blue-50 p-4 rounded-lg">
@@ -375,6 +369,14 @@
                                     <h4 class="font-medium">星野集團BEB5悠閒住宿</h4>
                                 </div>
                                 <p class="text-sm">濱海時尚設計酒店，無邊際泳池與共享空間設計</p>
+                            </div>
+
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-bed text-blue-600 mr-2"></i>
+                                    <h4 class="font-medium">Ocean Hotel親子友善住宿</h4>
+                                </div>
+                                <p class="text-sm">那霸市中心親子酒店，鄰近國際通，設施完善</p>
                             </div>
                         </div>
 
@@ -401,9 +403,9 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">11:15 - 12:00</div>
+                                <div class="timeline-time">11:15 - 13:00</div>
                                 <h3 class="font-semibold mb-1">前往OTS機場營業所辦理租車手續</h3>
-                                <p>前往OTS機場營業所辦理租車手續 (預計30-45分鐘)。</p>
+                                <p>前往OTS機場營業所辦理租車手續，預留充足時間處理文件與車輛檢查。</p>
                                 <div class="mt-2">
                                     <span class="badge badge-blue">租車手續</span>
                                 </div>
@@ -414,29 +416,76 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">12:00 - 13:00</div>
-                                <h3 class="font-semibold mb-1">出發前往永旺夢樂城沖繩來客夢 (AEON Mall Rycom)</h3>
-                                <p>沖繩最大購物中心，可在此用午餐及採購生活用品。車程約40分鐘。</p>
+                                <div class="timeline-time">13:00 - 14:00</div>
+                                <h3 class="font-semibold mb-1">前往DMM水族館 & 購物中心</h3>
+                                <p>前往DMM水族館，可在此用午餐及參觀水族館，順便逛一下購物中心。車程約30分鐘。</p>
                                 <div class="mt-2">
                                     <span class="badge badge-yellow">購物</span>
                                     <span class="badge badge-red">午餐</span>
+                                    <span class="badge badge-green">景點</span>
+                                </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> DMM水族館建議</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li>DMM水族館為室內景點，雨天也能安心遊玩。</li>
+                                        <li>購物中心內有美食廣場，選擇多樣。</li>
+                                        <li>建議停留1-1.5小時，包含用餐時間。</li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">13:00 - 14:30</div>
-                                <h3 class="font-semibold mb-1">在AEON用午餐 & 超市採購</h3>
-                                <p>在美食廣場用餐，超市採購飲料、零食、水果等。</p>
+                                <div class="timeline-time">14:00 - 16:30</div>
+                                <h3 class="font-semibold mb-1">DMM水族館參觀 & 購物中心探索</h3>
+                                <p>參觀DMM水族館，欣賞海洋生物，並在購物中心採購生活用品、飲料、零食等。</p>
                                 <div class="mt-2">
-                                    <span class="badge badge-red">美食廣場</span>
+                                    <span class="badge badge-green">水族館</span>
                                     <span class="badge badge-blue">超市採購</span>
                                 </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> DMM水族館必逛必買</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li><b>必逛：</b> 巨型水槽、觸摸池、海豚表演區、熱帶魚展示區</li>
+                                        <li><b>必買：</b> 海洋生物紀念品、沖繩特色零食、飲料、生活用品</li>
+                                        <li><b>美食：</b> 美食廣場有日式、西式、沖繩料理選擇</li>
+                                        <li><b>特色：</b> 室內景點，雨天也能安心遊玩，適合親子</li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">14:30 - 16:30</div>
+                                <div class="timeline-time">16:30 - 17:30</div>
+                                <h3 class="font-semibold mb-1">前往沖繩媳婦</h3>
+                                <p>前往沖繩媳婦，車程約20分鐘。這裡有更多購物選擇，可繼續採購。</p>
+                                <div class="mt-2">
+                                    <span class="badge badge-yellow">購物</span>
+                                    <span class="badge badge-blue">開車</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-time">17:30 - 18:30</div>
+                                <h3 class="font-semibold mb-1">前往Parco City購物中心</h3>
+                                <p>前往Parco City購物中心，車程約10分鐘。這裡有更多時尚品牌和美食選擇。</p>
+                                <div class="mt-2">
+                                    <span class="badge badge-yellow">購物</span>
+                                    <span class="badge badge-blue">開車</span>
+                                </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> Parco City必逛必買</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li><b>必逛：</b> 時尚品牌店、精品店、美食廣場、咖啡廳</li>
+                                        <li><b>必買：</b> 日系服飾、精品、沖繩特色商品、美食</li>
+                                        <li><b>特色：</b> 較為時尚的購物中心，適合年輕人</li>
+                                        <li><b>建議：</b> 可在此享用下午茶或購買伴手禮</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:30 - 19:30</div>
                                 <h3 class="font-semibold mb-1">開車前往BEB5沖繩瀨良垣</h3>
-                                <p>前往位於沖繩北部的瀨良垣酒店，車程約60-90分鐘。沿途可欣賞海岸風光。</p>
+                                <p>前往位於沖繩北部的瀨良垣酒店，車程約30-40分鐘。沿途可欣賞海岸風光。</p>
                                 <div class="mt-2">
                                     <span class="badge badge-blue">風景路線</span>
                                 </div>
@@ -447,22 +496,41 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">16:30 - 18:00</div>
+                                <div class="timeline-time">19:30 - 20:00</div>
                                 <h3 class="font-semibold mb-1">酒店辦理入住 & 設施探索</h3>
                                 <p>辦理入住手續，熟悉酒店環境，體驗無邊際泳池和休閒設施。</p>
                                 <div class="mt-2">
                                     <span class="badge badge-green">酒店設施</span>
                                     <span class="badge badge-blue">休閒時光</span>
                                 </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> BEB5酒店必體驗</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li><b>必體驗：</b> 無邊際泳池、海景客房、共享空間設計</li>
+                                        <li><b>必逛：</b> 酒店周邊海灘、夕陽觀景點</li>
+                                        <li><b>特色：</b> 星野集團設計酒店，時尚簡約風格</li>
+                                        <li><b>建議：</b> 傍晚可在泳池邊欣賞夕陽</li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">18:30 - 20:00</div>
-                                <h3 class="font-semibold mb-1">晚餐：瀨良垣島自家製麵</h3>
-                                <p>酒店附近的人氣沖繩麵店，品嚐正宗沖繩麵料理。</p>
+                                <div class="timeline-time">20:00 - 21:30</div>
+                                <h3 class="font-semibold mb-1">晚餐選擇（瀨良垣周邊）</h3>
+                                <p>瀨良垣周邊有多個晚餐選擇，可依喜好選擇：</p>
                                 <div class="mt-2">
                                     <span class="badge badge-red">當地料理</span>
-                                    <span class="badge badge-red">沖繩麵</span>
+                                    <span class="badge badge-red">晚餐</span>
+                                </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 晚餐推薦</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li><b>瀨良垣島自家製麵：</b> 人氣沖繩麵店，使用自製麵條與獨特湯頭。人均消費約1,000-1,500日圓。</li>
+                                        <li><b>海鮮居酒屋 海人：</b> 新鮮海鮮料理，可品嚐沖繩當地海產。人均消費約2,000-3,000日圓。</li>
+                                        <li><b>沖繩燒肉 牛角：</b> 連鎖燒肉店，提供多種肉類選擇。人均消費約2,500-4,000日圓。</li>
+                                        <li><b>沖繩家庭料理 島野菜：</b> 傳統沖繩家庭料理，健康美味。人均消費約1,500-2,500日圓。</li>
+                                        <li><b>海景餐廳 夕陽：</b> 可欣賞海景的餐廳，提供日式與西式料理。人均消費約3,000-5,000日圓。</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -471,234 +539,245 @@
 
                 <section id="day2" class="card">
                     <div class="card-header">
-                        <h2 class="text-2xl font-bold">第二天 (10/18 六): JUNGLIA恐龍樂園一日遊</h2>
+                        <h2 class="text-2xl font-bold">第二天 (10/18 六): 全日自由活動</h2>
                     </div>
                     <div class="card-body">
-                        <div class="mb-6">
-                            <img src="images/activities/junglia-overview.jpg" alt="JUNGLIA恐龍樂園鳥瞰圖" class="w-full h-auto rounded-lg shadow-md">
-                            <p class="text-sm text-center mt-2 text-gray-600">JUNGLIA恐龍樂園鳥瞰圖</p>
+                        <p class="mb-4">今天不安排固定行程，大家可依興趣自由搭配。以下提供四個精選景點，涵蓋親子互動、攝影打卡與美食購物，多雨備案也一併附上。建議依住宿位置與交通動線擇一至兩個重點造訪。</p>
+
+                        <div class="tip mb-6">
+                            <p class="font-medium"><i class="fas fa-route text-blue-600 mr-1"></i> 建議動線方案</p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><span class="font-medium">北線（親子＋水族，雨天友善）：</span> <b>BEB5瀨良垣</b> → NEO Park（名護）→ 美麗海水族館（本部）→ 國道58號返回 <b>BEB5瀨良垣</b>。</li>
+                                <li><span class="font-medium">中線（自然體驗＋夕陽）：</span> <b>BEB5瀨良垣</b> → Bios之丘（恩納）→ （選配）萬座毛/真榮田岬 → 傍晚不南下則直接回 <b>BEB5瀨良垣</b>。</li>
+                                <li><span class="font-medium">黃昏購物線（需預留車程）：</span> <b>BEB5瀨良垣</b> → 下午晚些出發至美國村（北谷）看夕陽＋晚餐 → 開車返回 <b>BEB5瀨良垣</b>。</li>
+                            </ul>
                         </div>
 
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-time">08:00 - 09:00</div>
-                                <h3 class="font-semibold mb-1">飯店早餐</h3>
-                                <p>享用豐盛的飯店早餐，為一天的冒險儲備能量。</p>
-                                <div class="mt-2">
-                                    <span class="badge badge-red">飯店早餐</span>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-time">09:30 - 10:30</div>
-                                <h3 class="font-semibold mb-1">開車前往JUNGLIA恐龍樂園</h3>
-                                <p>從瀨良垣前往恐龍樂園，車程約45-60分鐘。建議提前預約門票以避免排隊。</p>
-                                <div class="mt-2">
-                                    <span class="badge badge-blue">開車</span>
-                                    <span class="badge badge-green">景點</span>
-                                </div>
-                                <div class="tip mt-2">
-                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 購票提示</p>
-                                    <p class="text-sm">JUNGLIA門票建議提前在官網或Klook等平台預購，旺季常售罄。成人約4,000日圓，兒童價格依年齡不同。</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-time">10:30 - 16:00</div>
-                                <h3 class="font-semibold mb-1">JUNGLIA恐龍樂園探險</h3>
-                                <p>全天遊玩恐龍主題樂園，體驗各種遊樂設施與互動展示。</p>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                                    <div>
-                                        <img src="images/activities/junglia-adventure.jpg" alt="恐龍冒險體驗" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">恐龍叢林冒險</p>
-                                    </div>
-                                    <div>
-                                        <img src="images/activities/junglia-bridge.jpg" alt="空中吊橋探險" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">空中吊橋體驗</p>
-                                    </div>
-                                </div>
-
-                                <h4 class="font-medium mt-4 mb-2">不可錯過的設施：</h4>
-                                <ul class="list-disc pl-5 space-y-1">
-                                    <li>恐龍叢林探險：搭乘吉普車近距離接觸恐龍</li>
-                                    <li>空中飛索：從高處俯瞰整個樂園</li>
-                                    <li>互動恐龍展示：了解史前生物知識</li>
-                                    <li>兒童考古區：挖掘恐龍化石</li>
-                                    <li>熱氣球：升空欣賞沖繩美景</li>
+                        <h3 id="day2-spots" class="text-xl font-semibold mb-3">自由日推薦景點</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <div class="image-card mb-3"><img src="images/activities/美國村.jpg" alt="美國村 American Village" loading="lazy"></div>
+                                <h4 class="font-semibold mb-2">1) 美國村（American Village, 北谷）</h4>
+                                <p class="text-sm mb-3">沖繩最具美式濱海風情的購物與娛樂區，鄰近日落海灘，傍晚金色光影超好拍。商場林立、伴手禮與美食選擇多。</p>
+                                <ul class="list-disc pl-5 mb-3 text-sm">
+                                    <li><b>必玩亮點：</b> 日落海灘夕陽、摩天輪夜景、彩繪牆打卡、泡芙/漢堡/塔可飯。</li>
+                                    <li><b>親子友善：</b> 平坦好推車，室內空間多，雨天可轉購物。</li>
                                 </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge badge-green">主要景點</span>
-                                    <span class="badge badge-purple">冒險活動</span>
-                                    <span class="badge badge-yellow">親子互動</span>
-                                </div>
-
-                                <div class="tip mt-2">
-                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> JUNGLIA攻略提示</p>
-                                    <p class="text-sm">園區面積大，建議先取得園區地圖並規劃路線。熱門設施可先預約時段或一早前往排隊。記得攜帶防曬用品與飲水。</p>
-                                </div>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li><b>建議停留：</b> 2.5 - 4 小時（含散步與晚餐）</li>
+                                    <li><b>停車與交通：</b> 週邊多處停車場；自行開車最方便</li>
+                                    <li><b>連結：</b> <a class="text-blue-600" target="_blank" href="https://www.okinawa-americanvillage.com/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/3YtZ7it6t7oQ4iQ18">Google 地圖</a></li>
+                                </ul>
                             </div>
 
-                            <div class="timeline-item">
-                                <div class="timeline-time">12:30 - 13:30</div>
-                                <h3 class="font-semibold mb-1">園內午餐</h3>
-                                <p>在JUNGLIA園內餐廳用餐，提供多種日式輕食與兒童餐點。</p>
-                                <div class="mt-2">
-                                    <span class="badge badge-red">主題餐廳</span>
-                                </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <div class="image-card mb-3"><img src="images/activities/美麗海.jpg" alt="美麗海水族館" loading="lazy"></div>
+                                <h4 class="font-semibold mb-2">2) 美麗海水族館（本部町）</h4>
+                                <p class="text-sm mb-3">沖繩代表性景點，巨型「黑潮之海」水槽與鯨鯊超震撼，園區含海豚/海龜/海牛等戶外設施，雨天也能玩很久。</p>
+                                <ul class="list-disc pl-5 mb-3 text-sm">
+                                    <li><b>必玩亮點：</b> 鯨鯊黑潮之海、海豚表演、觸摸體驗區（視現場開放）。</li>
+                                    <li><b>親子友善：</b> 室內區廣、設施完善，推車友善。</li>
+                                </ul>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li><b>建議停留：</b> 3 - 5 小時（園區腹地大）</li>
+                                    <li><b>票價與停車：</b> 票價依年齡分級；周邊停車場充足（多為免費）</li>
+                                    <li><b>連結：</b> <a class="text-blue-600" target="_blank" href="https://churaumi.okinawa/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/3Hf9cU8i1yL2">Google 地圖</a></li>
+                                </ul>
                             </div>
 
-                            <div class="timeline-item">
-                                <div class="timeline-time">16:00 - 17:30</div>
-                                <h3 class="font-semibold mb-1">返回瀨良垣酒店</h3>
-                                <p>結束一天的探險，返回酒店休息。</p>
-                                <div class="mt-2">
-                                    <span class="badge badge-blue">開車</span>
-                                </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <div class="image-card mb-3"><img src="images/activities/neopark.jpg" alt="NEO Park Okinawa" loading="lazy"></div>
+                                <h4 class="font-semibold mb-2">3) NEO Park 名護自然動植物公園（名護）</h4>
+                                <p class="text-sm mb-3">半放養型態的鳥園與互動餵食體驗，還有迷你小火車，深受親子喜愛；陰天或小雨仍可安排。</p>
+                                <ul class="list-disc pl-5 mb-3 text-sm">
+                                    <li><b>必玩亮點：</b> 餵食鸚鵡/火烈鳥、與動物近距離互動、小火車巡園。</li>
+                                    <li><b>親子友善：</b> 戶外步道平緩，設有休息區與洗手間。</li>
+                                </ul>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li><b>建議停留：</b> 2 - 3 小時</li>
+                                    <li><b>票價與停車：</b> 票價親民；園區備有停車場</li>
+                                    <li><b>連結：</b> <a class="text-blue-600" target="_blank" href="https://www.neopark.co.jp/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/7mCEx2dX5yG2">Google 地圖</a></li>
+                                </ul>
                             </div>
 
-                            <div class="timeline-item">
-                                <div class="timeline-time">18:00 - 20:00</div>
-                                <h3 class="font-semibold mb-1">晚餐：琉球の牛恩納店</h3>
-                                <p>品嚐沖繩著名的石垣牛燒肉，享受頂級和牛盛宴。</p>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                                    <div>
-                                        <img src="images/food/ryukyu-beef.jpg" alt="琉球和牛燒肉" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">琉球の牛和牛燒肉套餐</p>
-                                    </div>
-                                    <div>
-                                        <img src="images/food/premium-beef.jpg" alt="頂級和牛" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">頂級石垣牛</p>
-                                    </div>
-                                </div>
-                                <div class="mt-2">
-                                    <span class="badge badge-red">當地美食</span>
-                                    <span class="badge badge-red">和牛燒肉</span>
-                                </div>
-                                <div class="warning mt-2">
-                                    <p class="font-medium"><i class="fas fa-exclamation-triangle text-orange-600 mr-1"></i> 預約提醒</p>
-                                    <p class="text-sm">琉球の牛為人氣店家，建議提前1-2週預約，可透過官網或請飯店協助。</p>
-                                </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <div class="image-card mb-3"><img src="images/activities/bios之丘.jpg" alt="Bios之丘" loading="lazy"></div>
+                                <h4 class="font-semibold mb-2">4) Bios之丘（恩納）</h4>
+                                <p class="text-sm mb-3">充滿熱帶叢林風貌的自然公園，可搭乘遊園船或划獨木舟，園內蘭花與步道景觀適合攝影與親近自然。</p>
+                                <ul class="list-disc pl-5 mb-3 text-sm">
+                                    <li><b>必玩亮點：</b> 遊園船/獨木舟、叢林步道、自然生態導覽。</li>
+                                    <li><b>親子友善：</b> 活動有年齡限制請先確認；晴天體驗最佳。</li>
+                                </ul>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li><b>建議停留：</b> 2 - 3 小時</li>
+                                    <li><b>票價與停車：</b> 票價依活動而異；園區附設停車場</li>
+                                    <li><b>連結：</b> <a class="text-blue-600" target="_blank" href="https://www.bios-hill.co.jp/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/VHqJt3xQy8E2">Google 地圖</a></li>
+                                </ul>
                             </div>
+                        </div>
+
+                        <div class="divider mt-8"></div>
+
+                        <h3 id="day2-nearby" class="text-xl font-semibold mb-3">瀨良垣周邊景點（車程 30 分內）</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <h4 class="font-semibold mb-2">萬座毛（Cape Manzamo）</h4>
+                                <p class="text-sm mb-2">象鼻岩海岸地形，木棧道環景好走，夕陽視野佳。</p>
+                                <p class="text-sm mb-2"><b>車程：</b>約 10 分鐘｜<b>停車：</b>園區收費停車</p>
+                                <p class="text-sm"><a class="text-blue-600" target="_blank" href="https://www.okinawastory.jp/spot/600006262">介紹</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/2BqvZpQ9s8J2">地圖</a></p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <h4 class="font-semibold mb-2">Busena 海中展望塔／玻璃船</h4>
+                                <p class="text-sm mb-2">從海中展望塔看魚群，或搭玻璃底遊船，親子友善。</p>
+                                <p class="text-sm mb-2"><b>車程：</b>約 20 分鐘｜<b>停車：</b>渡假村停車場</p>
+                                <p class="text-sm"><a class="text-blue-600" target="_blank" href="https://www.busena-marinepark.com/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/2qK8n5p7w7H2">地圖</a></p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <h4 class="font-semibold mb-2">真榮田岬（Cape Maeda）</h4>
+                                <p class="text-sm mb-2">藍洞浮潛熱門點；不下水也可沿步道觀景，風大注意。</p>
+                                <p class="text-sm mb-2"><b>車程：</b>約 25 分鐘｜<b>停車：</b>收費停車場</p>
+                                <p class="text-sm"><a class="text-blue-600" target="_blank" href="https://www.maedamisaki.jp/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/dcKcXkQXk1B2">地圖</a></p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <h4 class="font-semibold mb-2">琉球村（Ryukyu Mura）</h4>
+                                <p class="text-sm mb-2">傳統琉球建築園區，文化體驗與表演，雨天也能逛。</p>
+                                <p class="text-sm mb-2"><b>車程：</b>約 20 分鐘｜<b>停車：</b>園區停車場</p>
+                                <p class="text-sm"><a class="text-blue-600" target="_blank" href="https://www.ryukyumura.co.jp/">官網</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/7r36p4iY3oM2">地圖</a></p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <h4 class="font-semibold mb-2">殘波岬燈塔（Cape Zanpa）</h4>
+                                <p class="text-sm mb-2">白色燈塔與礁岸風景，傍晚拍照佳，風大請注意安全。</p>
+                                <p class="text-sm mb-2"><b>車程：</b>約 30 分鐘｜<b>停車：</b>公園停車場</p>
+                                <p class="text-sm"><a class="text-blue-600" target="_blank" href="https://www.okinawastory.jp/spot/600006261">介紹</a> ｜ <a class="text-blue-600" target="_blank" href="https://goo.gl/maps/fmQkQxF9t7w">地圖</a></p>
+                            </div>
+                        </div>
+
+                        <div class="tip mt-6">
+                            <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 小提醒</p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li>晴天建議將戶外景點（Bios/美國村夕陽）排在午後至黃昏，光線最佳。</li>
+                                <li>雨天可優先安排美麗海水族館或美國村室內購物。</li>
+                                <li>多人同行可分車行動，於晚餐時段在美國村或國際通會合。</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-6 space-x-2">
+                            <a class="cta-button" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=BEB5+Okinawa+Seragaki&destination=BEB5+Okinawa+Seragaki&waypoints=NEO+Park+Okinawa%7COkinawa+Churaumi+Aquarium">北線：BEB5 → NEO Park → 美麗海 → BEB5</a>
+                            <a class="cta-button" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=BEB5+Okinawa+Seragaki&destination=BEB5+Okinawa+Seragaki&waypoints=Bios+no+Oka%7CAmerican+Village+Okinawa">中線：BEB5 → Bios之丘 → 美國村 → BEB5</a>
                         </div>
                     </div>
                 </section>
 
                 <section id="day3" class="card">
                     <div class="card-header">
-                        <h2 class="text-2xl font-bold">第三天 (10/19 日): 美麗海水族館 & SUP體驗</h2>
+                        <h2 class="text-2xl font-bold">第三天 (10/19 日): Round 1 娛樂體驗日</h2>
                     </div>
                     <div class="card-body">
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-time">08:00 - 09:00</div>
                                 <h3 class="font-semibold mb-1">飯店早餐</h3>
-                                <p>享用飯店早餐，並整理行囊。</p>
+                                <p>享用飯店早餐，整理行囊，準備出發。</p>
                                 <div class="mt-2">
                                     <span class="badge badge-red">飯店早餐</span>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">09:30 - 10:30</div>
-                                <h3 class="font-semibold mb-1">瀨良垣海灘SUP體驗</h3>
-                                <p>在瀨良垣海灘參加透明立槳體驗，欣賞海底世界。</p>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                                    <div>
-                                        <img src="images/activities/sup-experience.jpg" alt="SUP立槳體驗" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">SUP立槳體驗</p>
-                                    </div>
-                                    <div>
-                                        <img src="images/activities/clear-water.jpg" alt="清澈海水" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">清澈海水</p>
-                                    </div>
-                                </div>
-
-                                <div class="mt-2">
-                                    <span class="badge badge-purple">水上活動</span>
-                                    <span class="badge badge-green">海灘</span>
-                                </div>
-                                <div class="tip mt-2">
-                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> SUP體驗提示</p>
-                                    <p class="text-sm">
-                                        - 適合初學者，含簡單教學<br>
-                                        - 攜帶防水相機捕捉海底美景<br>
-                                        - 穿著快乾衣物與防水防曬<br>
-                                        - 提前預約，每人約3,000-5,000日圓
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-time">11:00 - 12:00</div>
-                                <h3 class="font-semibold mb-1">辦理退房 & 開車前往美麗海水族館</h3>
-                                <p>完成飯店退房手續，開車前往美麗海水族館，車程約40分鐘。</p>
+                                <div class="timeline-time">09:30 - 10:00</div>
+                                <h3 class="font-semibold mb-1">前往 Round 1 娛樂中心</h3>
+                                <p>開車前往那霸市區 Round 1 娛樂中心，車程約30分鐘。</p>
                                 <div class="mt-2">
                                     <span class="badge badge-blue">開車</span>
+                                    <span class="badge badge-green">娛樂</span>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">12:30 - 13:30</div>
-                                <h3 class="font-semibold mb-1">美麗海水族館周邊午餐</h3>
-                                <p>在水族館周邊餐廳享用午餐，可品嚐海葡萄等沖繩特色食材。</p>
+                                <div class="timeline-time">10:00 - 15:30</div>
+                                <h3 class="font-semibold mb-1">Round 1 綜合娛樂體驗</h3>
+                                <p>盡情體驗日本人氣大型娛樂中心Round 1，設施豐富多元，適合全家大小同樂：</p>
+                                <ul class="list-disc pl-5 mb-2 text-sm">
+                                    <li><b>保齡球館：</b>多條球道，適合團體競賽或親子同樂。</li>
+                                    <li><b>夾娃娃機/扭蛋區：</b>最新熱門公仔、玩偶、動漫周邊，挑戰手氣。</li>
+                                    <li><b>電子遊戲機台：</b>音樂機、格鬥、賽車、射擊、懷舊街機等。</li>
+                                    <li><b>運動設施：</b>籃球投籃、棒球打擊、溜冰、射箭、桌球、羽球、飛鏢、迷你高爾夫等。</li>
+                                    <li><b>卡拉OK包廂：</b>日系卡拉OK，適合小團體歡唱。</li>
+                                    <li><b>兒童遊樂區：</b>球池、滑梯、攀爬設施，適合小朋友放電。</li>
+                                    <li><b>桌上遊戲/競速賽車：</b>桌遊、模擬賽車、互動體感遊戲。</li>
+                                </ul>
                                 <div class="mt-2">
-                                    <span class="badge badge-red">當地美食</span>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-time">13:30 - 16:00</div>
-                                <h3 class="font-semibold mb-1">參觀沖繩美麗海水族館</h3>
-                                <p>欣賞世界最大的鯨鯊水槽和多樣的海洋生物展示。</p>
-                                <div class="mt-2">
-                                    <span class="badge badge-green">主要景點</span>
-                                    <span class="badge badge-yellow">親子活動</span>
+                                    <span class="badge badge-green">親子活動</span>
+                                    <span class="badge badge-purple">遊樂設施</span>
                                 </div>
                                 <div class="tip mt-2">
-                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 水族館參觀重點</p>
-                                    <p class="text-sm">
-                                        - 黑潮之海：巨型水槽，鯨鯊與魔鬼魚共游<br>
-                                        - 珊瑚礁之旅：熱帶魚與珊瑚生態展示<br>
-                                        - 海豚表演：每日定時表演，請查詢時間表<br>
-                                        - 海牛館：觀賞罕見的海牛<br>
-                                        - 深海生物區：展示深海奇特生物
-                                    </p>
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 遊玩建議與特殊玩法</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li>可購買「無限暢玩券」或時段體驗券，設施不限次數暢玩，最划算。</li>
+                                        <li>建議分組進行團體賽（如保齡球、籃球投籃、賽車競速），增添互動樂趣。</li>
+                                        <li>夾娃娃機/扭蛋區可與親友比賽誰夾最多、最特別的獎品。</li>
+                                        <li>部分設施有積分或獎品兌換，記得收集兌換券。</li>
+                                        <li>卡拉OK可預約包廂，適合小團體歡唱放鬆。</li>
+                                        <li>兒童遊樂區適合小朋友放電，大人可輪流休息。</li>
+                                        <li>設施眾多，建議先規劃想體驗的重點，避免分散時間。</li>
+                                        <li>部分設施需額外付費，建議攜帶足夠日圓現金。</li>
+                                        <li>可利用官方APP或現場活動參加特殊挑戰賽，贏取限定小禮物。</li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">16:00 - 18:00</div>
-                                <h3 class="font-semibold mb-1">返回那霸市區 & 還車</h3>
-                                <p>從美麗海水族館開車返回那霸市區，車程約1.5-2小時。在OTS那霸營業所還車。</p>
+                                <div class="timeline-time">15:30 - 17:00</div>
+                                <h3 class="font-semibold mb-1">前往Ocean Hotel Okinawa下行李 & 前往那霸DFS OTS還車</h3>
+                                <p>提前預留時間，先開車前往Ocean Hotel Okinawa，將行李下車寄存，確認房間資訊後，再開車前往那霸DFS OTS營業所，於17:00前完成還車手續。</p>
                                 <div class="mt-2">
-                                    <span class="badge badge-blue">長途開車</span>
+                                    <span class="badge badge-blue">下行李</span>
                                     <span class="badge badge-blue">還車手續</span>
                                 </div>
                                 <div class="warning mt-2">
-                                    <p class="font-medium"><i class="fas fa-exclamation-triangle text-orange-600 mr-1"></i> 還車注意事項</p>
-                                    <p class="text-sm">還車前請加滿油，保留加油收據。請預留充足時間，避免趕行程。T Galleria附近有多家加油站。</p>
+                                    <p class="font-medium"><i class="fas fa-exclamation-triangle text-orange-600 mr-1"></i> 還車提醒</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li>還車前請加滿油，保留加油收據。</li>
+                                        <li>預留充足時間避免趕行程，建議15:30即開始行動。</li>
+                                        <li>建議先將行李寄存飯店，還車後可輕鬆前往Check in。</li>
+                                        <li>那霸DFS OTS營業所位於國際通附近，還車後可直接步行前往飯店。</li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">18:30 - 19:30</div>
-                                <h3 class="font-semibold mb-1">入住那霸海洋飯店</h3>
-                                <p>辦理入住手續，安頓行李。飯店位於國際通附近，交通便利。</p>
+                                <div class="timeline-time">17:00 - 17:30</div>
+                                <h3 class="font-semibold mb-1">前往Ocean Hotel Okinawa辦理Check in</h3>
+                                <p>還車後，步行前往Ocean Hotel Okinawa，辦理入住手續並安頓行李。</p>
                                 <div class="mt-2">
-                                    <span class="badge badge-green">住宿</span>
+                                    <span class="badge badge-green">飯店Check in</span>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-time">19:30 - 21:00</div>
-                                <h3 class="font-semibold mb-1">晚餐：國際通屋台村</h3>
-                                <p>在國際通屋台村品嚐各式沖繩小吃與居酒屋料理。</p>
+                                <div class="timeline-time">17:30 - 19:00</div>
+                                <h3 class="font-semibold mb-1">國際通逛街 & 前往晚餐地點</h3>
+                                <p>辦理入住後，在國際通附近稍微逛街，熟悉環境，然後前往燒肉本部牧場國際通店。</p>
                                 <div class="mt-2">
-                                    <span class="badge badge-red">當地美食</span>
-                                    <span class="badge badge-red">居酒屋</span>
+                                    <span class="badge badge-yellow">逛街</span>
+                                    <span class="badge badge-blue">步行</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-time">19:00 - 21:00</div>
+                                <h3 class="font-semibold mb-1">團體晚餐：燒肉本部牧場國際通店</h3>
+                                <p>享用燒肉本部牧場的美味燒肉，體驗沖繩特色燒肉料理。</p>
+                                <div class="mt-2">
+                                    <span class="badge badge-red">團體晚餐</span>
+                                    <span class="badge badge-red">燒肉</span>
+                                </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 訂位建議</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li>燒肉本部牧場為人氣店家，已預訂晚上7點。</li>
+                                        <li>建議提前15分鐘到達，避免遲到。</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -738,37 +817,37 @@
                                     <span class="badge badge-yellow">伴手禮</span>
                                 </div>
                                 <div class="tip mt-2">
-                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 國際通購物提示</p>
-                                    <p class="text-sm">
-                                        - 御菓子御殿：必買紅芋塔<br>
-                                        - 國際通りDon Quijote：藥妝、零食、日用品<br>
-                                        - 塩屋：各式沖繩鹽製品<br>
-                                        - 平和通商店街：在地風味小店<br>
-                                        - 第一牧志公設市場：當地食材與特產
-                                    </p>
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 國際通必逛必買指南</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li><b>Don Don Donki（唐吉訶德）：</b> 必逛！藥妝、零食、日用品、伴手禮一應俱全，價格實惠</li>
+                                        <li><b>御菓子御殿：</b> 必買紅芋塔、沖繩特色甜點，送禮首選</li>
+                                        <li><b>國際通りDon Quijote：</b> 藥妝、零食、日用品，24小時營業</li>
+                                        <li><b>塩屋：</b> 各式沖繩鹽製品，特色伴手禮</li>
+                                        <li><b>平和通商店街：</b> 在地風味小店，傳統沖繩商品</li>
+                                        <li><b>第一牧志公設市場：</b> 當地食材與特產，體驗在地文化</li>
+                                        <li><b>沖繩工藝品店：</b> 琉球玻璃、陶器、織品等手工藝品</li>
+                                        <li><b>服飾店：</b> 日系服飾、沖繩特色T恤、海灘用品</li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="timeline-item">
                                 <div class="timeline-time">12:00 - 13:30</div>
-                                <h3 class="font-semibold mb-1">午餐：國際通美食</h3>
-                                <p>在國際通上的餐廳享用午餐，可品嚐沖繩麵、塔可飯等特色料理。</p>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
-                                    <div>
-                                        <img src="images/food/okinawa-soba.jpg" alt="沖繩麵" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">沖繩麵</p>
-                                    </div>
-                                    <div>
-                                        <img src="images/food/wagyu-dish.jpg" alt="和牛料理" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">和牛料理</p>
-                                    </div>
-                                    <div>
-                                        <img src="images/food/taco-rice.jpg" alt="塔可飯" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">塔可飯</p>
-                                    </div>
-                                </div>
+                                <h3 class="font-semibold mb-1">午餐：一蘭拉麵</h3>
+                                <p>前往一蘭拉麵國際通店享用午餐，記得下載APP可兌換免費兒童拉麵。</p>
+                                
                                 <div class="mt-2">
-                                    <span class="badge badge-red">當地美食</span>
+                                    <span class="badge badge-red">一蘭拉麵</span>
+                                    <span class="badge badge-red">APP優惠</span>
+                                </div>
+                                <div class="tip mt-2">
+                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 一蘭拉麵小提示</p>
+                                    <ul class="list-disc pl-5 text-sm">
+                                        <li>記得下載一蘭拉麵APP，可兌換免費兒童拉麵</li>
+                                        <li>建議避開用餐尖峰時段（12:00-13:00）</li>
+                                        <li>可選擇湯頭濃淡、麵條硬度等個人化選項</li>
+                                        <li>店內有中文菜單，點餐無障礙</li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -979,192 +1058,6 @@
                     </div>
                 </section>
 
-                <section id="junglia" class="card">
-                    <div class="card-header">
-                        <h2 class="text-2xl font-bold">JUNGLIA恐龍樂園攻略</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-6">
-                            <img src="images/activities/junglia-overview.jpg" alt="JUNGLIA恐龍樂園鳥瞰圖" class="w-full h-auto rounded-lg shadow-md">
-                            <p class="text-sm text-center mt-2 text-gray-600">JUNGLIA恐龍樂園鳥瞰圖</p>
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-3">園區介紹</h3>
-                        <p class="mb-4">JUNGLIA是沖繩2024年開幕的全新恐龍主題樂園，位於沖繩本島中北部，占地面積廣闊，融合了恐龍展示、互動體驗、冒險活動和教育功能於一體。園區以熱帶叢林為背景，重現恐龍時代場景，同時提供刺激的戶外活動設施。</p>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <h4 class="font-semibold mb-2">必玩設施</h4>
-                                <ul class="list-disc pl-5 space-y-2">
-                                    <li><span class="font-medium">恐龍叢林探險：</span>乘坐特製車輛穿越恐龍棲息地，近距離接觸大型恐龍模型，有驚險逃離劇情。</li>
-                                    <li><span class="font-medium">熱氣球體驗：</span>搭乘熱氣球升空，鳥瞰整個樂園與沖繩美景。</li>
-                                    <li><span class="font-medium">樹頂冒險：</span>高空繩索與吊橋體驗，穿梭於樹冠層。</li>
-                                    <li><span class="font-medium">飛索滑降：</span>從高處以飛索滑降，體驗刺激的速度感。</li>
-                                    <li><span class="font-medium">恐龍互動區：</span>與小型恐龍模型互動，了解各種恐龍知識。</li>
-                                    <li><span class="font-medium">化石挖掘：</span>體驗考古工作，挖掘恐龍化石。</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-2">實用資訊</h4>
-                                <ul class="list-disc pl-5 space-y-2">
-                                    <li><span class="font-medium">營業時間：</span>09:00-18:00 (最晚入園17:00)</li>
-                                    <li><span class="font-medium">門票價格：</span>成人約4,000日圓，兒童價格依年齡區分</li>
-                                    <li><span class="font-medium">預約方式：</span>建議提前在官網或Klook等平台預購門票</li>
-                                    <li><span class="font-medium">園區規模：</span>遊覽全園至少需要4-5小時</li>
-                                    <li><span class="font-medium">餐飲設施：</span>園內有多家餐廳及小吃攤位</li>
-                                    <li><span class="font-medium">停車場：</span>收費停車場充足，約500日圓/天</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="tip mb-6">
-                            <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 遊園攻略</p>
-                            <ol class="list-decimal pl-5 space-y-1 text-sm">
-                                <li>建議一早入園，先前往最受歡迎的恐龍叢林探險</li>
-                                <li>取得園區地圖並規劃路線，避免走回頭路</li>
-                                <li>部分熱門設施接受預約，入園後應立即查詢並預約時段</li>
-                                <li>帶小孩前往請核對身高要求，部分設施有身高限制</li>
-                                <li>攜帶防曬用品、飲水和輕便雨具</li>
-                                <li>穿著舒適運動鞋，部分設施需要大量步行或攀爬</li>
-                                <li>園區起伏大，推車前往可能不方便</li>
-                            </ol>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                            <div>
-                                <img src="images/activities/junglia-bridge.jpg" alt="JUNGLIA空中吊橋" class="w-full h-auto rounded-lg">
-                                <p class="text-sm text-center mt-1 text-gray-600">空中吊橋探險</p>
-                            </div>
-                            <div>
-                                <img src="images/activities/junglia-zip-line.jpg" alt="JUNGLIA飛索體驗" class="w-full h-auto rounded-lg">
-                                <p class="text-sm text-center mt-1 text-gray-600">刺激飛索體驗</p>
-                            </div>
-                        </div>
-
-                        <div class="warning">
-                            <p class="font-medium"><i class="fas fa-exclamation-triangle text-orange-600 mr-1"></i> 注意事項</p>
-                            <ul class="list-disc pl-5 space-y-1 text-sm">
-                                <li>戶外活動眾多，請密切注意天氣變化</li>
-                                <li>沖繩日曬強烈，務必做好防曬措施</li>
-                                <li>部分設施需另付費，入園前請確認包含項目</li>
-                                <li>冒險設施有年齡與身高限制，請提前確認孩童是否符合要求</li>
-                                <li>雨天時部分戶外設施可能關閉</li>
-                                <li>熱門季節需提前數週預約</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="sup" class="card">
-                    <div class="card-header">
-                        <h2 class="text-2xl font-bold">SUP立槳體驗指南</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <h3 class="text-xl font-semibold mb-3">瀨良垣SUP體驗</h3>
-                                <p class="mb-4">沖繩的清澈海水是體驗透明立槳(SUP)的絕佳場所。透過透明的立槳板，可以直接觀賞腳下的珊瑚礁與熱帶魚，是近年來非常受歡迎的水上活動。特別適合初學者和家庭，無需特殊技能即可輕鬆體驗。</p>
-
-                                <h4 class="font-semibold mb-2">活動內容</h4>
-                                <ul class="list-disc pl-5 space-y-1">
-                                    <li>專業教練基礎教學 (約15-20分鐘)</li>
-                                    <li>海上立槳巡航 (約40-60分鐘)</li>
-                                    <li>欣賞海底生態與珊瑚礁</li>
-                                    <li>拍攝紀念照片 (部分業者提供)</li>
-                                </ul>
-
-                                <div class="tip mt-4">
-                                    <p class="font-medium"><i class="fas fa-lightbulb text-blue-600 mr-1"></i> 體驗小技巧</p>
-                                    <ul class="list-disc pl-5 space-y-1 text-sm">
-                                        <li>站立姿勢要穩：雙腳與肩同寬，膝蓋微彎</li>
-                                        <li>划槳要有節奏：划槳時保持槳葉完全入水</li>
-                                        <li>平衡是關鍵：視線保持水平，不要低頭看腳</li>
-                                        <li>跌落水中時別慌：抓住槳與板，重新爬上去</li>
-                                        <li>有腰包式救生衣，不影響活動又安全</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <img src="images/activities/sup-experience.jpg" alt="SUP立槳體驗" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">SUP立槳體驗</p>
-                                    </div>
-                                    <div>
-                                        <img src="images/activities/clear-water.jpg" alt="透明海水體驗" class="w-full h-auto rounded-lg">
-                                        <p class="text-sm text-center mt-1 text-gray-600">透明海水體驗</p>
-                                    </div>
-                                </div>
-
-                                <h4 class="font-semibold mt-4 mb-2">適合對象</h4>
-                                <ul class="list-disc pl-5 space-y-1">
-                                    <li>初學者、無經驗者也能參加</li>
-                                    <li>一般需10歲以上才能獨立操作</li>
-                                    <li>親子同樂可選擇雙人板</li>
-                                    <li>需具基本游泳能力</li>
-                                </ul>
-
-                                <h4 class="font-semibold mt-4 mb-2">預約資訊</h4>
-                                <ul class="list-disc pl-5 space-y-1">
-                                    <li>體驗費用：每人約4,000-6,000日圓</li>
-                                    <li>建議提前一週預約</li>
-                                    <li>多家業者提供服務，可比較價格與服務內容</li>
-                                    <li>Klook或官網預訂通常較優惠</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="warning mb-6">
-                            <p class="font-medium"><i class="fas fa-exclamation-triangle text-orange-600 mr-1"></i> 注意事項</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <ul class="list-disc pl-5 space-y-1 text-sm">
-                                    <li>遵循教練指示，注意安全</li>
-                                    <li>風浪大時可能取消，請確認天氣</li>
-                                    <li>請穿著可浸水的服裝 (泳衣或快乾衣)</li>
-                                    <li>貴重物品請勿攜帶，或使用防水袋</li>
-                                </ul>
-                                <ul class="list-disc pl-5 space-y-1 text-sm">
-                                    <li>請做好防曬，建議使用物理性防曬</li>
-                                    <li>眼鏡配戴者建議使用眼鏡繩</li>
-                                    <li>請準備替換衣物與毛巾</li>
-                                    <li>保護海洋生態，請勿觸摸珊瑚與海洋生物</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <h3 class="text-xl font-semibold mb-3">瀨良垣海灘周邊體驗</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-swimmer text-blue-600 mr-2"></i>
-                                    <h4 class="font-medium">浮潛</h4>
-                                </div>
-                                <p class="text-sm">除了SUP，瀨良垣海灘也適合浮潛，水清魚多，珊瑚生態豐富。</p>
-                                <p class="text-sm">價格：約3,000-4,000日圓/人</p>
-                            </div>
-
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-ship text-blue-600 mr-2"></i>
-                                    <h4 class="font-medium">玻璃底船</h4>
-                                </div>
-                                <p class="text-sm">不想下水也能欣賞海底世界，適合全家一起體驗。</p>
-                                <p class="text-sm">價格：約2,500-3,500日圓/人</p>
-                            </div>
-
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <div class="flex items-center mb-2">
-                                    <i class="fas fa-water text-blue-600 mr-2"></i>
-                                    <h4 class="font-medium">香蕉船</h4>
-                                </div>
-                                <p class="text-sm">刺激好玩的香蕉船，一次可容納多人，適合親子同樂。</p>
-                                <p class="text-sm">價格：約2,000-3,000日圓/人</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <section id="food" class="card">
                     <div class="card-header">
                         <h2 class="text-2xl font-bold">沖繩特色美食</h2>
@@ -1281,7 +1174,7 @@
                                 <li>熱門餐廳建議提前預約，特別是週末晚餐時段</li>
                                 <li>使用Google Maps或「食べログ」App尋找高評價餐廳</li>
                                 <li>部分高級餐廳可能需要穿著得體</li>
-                                <li>「沖繩時間」觀念：服務可能稍慢，請耐心等待</li>
+                                <li>"沖繩時間"觀念：服務可能稍慢，請耐心等待</li>
                                 <li>許多餐廳都提供兒童餐具與座椅，可提前詢問</li>
                                 <li>牧志第一市場可體驗「你買我煮」的新鮮海鮮</li>
                             </ul>
