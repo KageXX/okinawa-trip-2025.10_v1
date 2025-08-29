@@ -20,7 +20,7 @@
 
 ## 部署
 
-使用GitHub Pages部署，訪問地址：[https://KageXX.github.io/okinawa-trip-2025/](https://kagexx.github.io/okinawa-trip-2025.10_v1/)
+使用GitHub Pages部署，訪問地址：https://kagexx.github.io/okinawa-trip-2025.10_v1/
 
 ## 本地開發
 
